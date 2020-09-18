@@ -1,2 +1,2 @@
 # holbertonschool-low_level_programming
-A repo with projects about learning C
+Contains projects used to learn C code, e.g. how to compile, what are loops and conditional statements, etc.
