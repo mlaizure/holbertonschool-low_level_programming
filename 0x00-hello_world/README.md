@@ -10,5 +10,5 @@ Task 7 is a blog post
 - 5: used printf to output a string to the stdout
 - 6: used printf and sizeof to output sizes of different types to the stdout
 - 7: https://www.linkedin.com/pulse/compiling-c-code-gcc-maddi-laizure/?published=t&trackingId=tbmIKaIYRqCLoldCP2zOoQ%3D%3D
-- 8: gcc -S -masm=intel generates assembly code in Intel syntax of a C file and saves it in an output file
-- 9: used write function to output string to the stderr
+- 100: (8) gcc -S -masm=intel generates assembly code in Intel syntax of a C file and saves it in an output file
+- 101: (9) used write function to output string to the stderr
