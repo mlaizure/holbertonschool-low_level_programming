@@ -11,6 +11,6 @@ All files are source files written in C
 - 8: used two for loops and putchar to print all the numbers of base 16 in lowercase
 - 9: used a for loop and if else statement to print 0 - 9 with commas and spaces inbetween
 - 10: used a for loop and if else statement to print all numbers from 00 -99 with commas and spaces inbetween
-- 11: used a lot of unnecessary modular math to exlude non-unique two number combinations
-- 12: this time the modular math made it easier to exclude non-unique three number combinations
-- 13: used nested for loops to print unique combinations of two two-digit numbers
+- 100: (11) used a lot of unnecessary modular math to exlude non-unique two number combinations
+- 101: (12) this time the modular math made it easier to exclude non-unique three number combinations
+- 102: (13) used nested for loops to print unique combinations of two two-digit numbers
