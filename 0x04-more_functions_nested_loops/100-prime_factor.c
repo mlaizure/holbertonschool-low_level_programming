@@ -10,7 +10,7 @@ int main(void)
 {
 	long int i = 612852475143, div = 2, maxP;
 
-	while (i != 0)
+	while (1)
 	{
 		if (i % div != 0)
 			div = div + 1;
