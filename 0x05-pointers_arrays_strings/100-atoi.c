@@ -16,7 +16,7 @@ int _atoi(char *s)
 		i++;
 	}
 
-	while ((s[i] >= '0' && s[i] <= '9') && s[i] != '\0')
+	while (s[i] >= '0' && s[i] <= '9')
 	{
 		j = j * 10 + sign * (s[i] - '0');
 		i++;
