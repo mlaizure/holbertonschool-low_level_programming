@@ -18,11 +18,9 @@ int _atoi(char *s)
 
 	while ((s[i] >= '0' && s[i] <= '9') && s[i] != '\0')
 	{
-		j = j * 10 + (s[i] - '0');
-		if (j < 0)
-			return (sign * 2147483647);
+		j = j * 10 + sign * (s[i] - '0');
 		i++;
 	}
 
-	return (j * sign);
+	return (j);
 }
