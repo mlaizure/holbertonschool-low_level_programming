@@ -10,4 +10,4 @@ Files contain C code
 - 7: function that prints half of a string, followed by a new line
 - 8: function that prints n elements of an array of integers, followed by a new line
 - 9: function that copies the string pointed to by src, including the terminating null byte, to the buffer pointed to by dest
-- 100: function that converts a string to an integer
+- 100: (10) function that converts a string to an integer
