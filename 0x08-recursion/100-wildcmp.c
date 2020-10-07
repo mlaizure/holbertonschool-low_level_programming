@@ -37,6 +37,7 @@ int is_match(char *s1, int st1, char *s2, int st2)
 		int matchHere = is_match(s1, st1 + 1, s2, st2 + 1);
 		int matchGlob = is_match(s1, st1 + 1, s2, st2);
 		int matchNone = is_match(s1, st1, s2, st2 + 1);
+
 		return (matchHere || matchGlob || matchNone);
 	}
 	else if (s1[st1] == s2[st2])
