@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * _strlen_recursion - returns the length of a string
  * @s: string to find the length of
@@ -31,14 +33,17 @@ int is_match(char *s1, int st1, char *s2, int st2)
 		return (0);
 
 	if (s2[st2] == '*' && !s1[st1])
+	{
 		return (is_match(s1, st1, s2, st2 + 1));
+	}
 	else if (s2[st2] == '*')
 	{
-		int matchHere = is_match(s1, st1 + 1, s2, st2 + 1);
-		int matchGlob = is_match(s1, st1 + 1, s2, st2);
-		int matchNone = is_match(s1, st1, s2, st2 + 1);
-
-		return (matchHere || matchGlob || matchNone);
+		if (is_match(s1, st1, s2, st2 + 1))
+			return (1);
+		else if (is_match(s1, st1 + 1, s2, st2))
+			return (1);
+		else if (is_match(s1, st1 + 1, s2, st2 + 1))
+			return (1);
 	}
 	else if (s1[st1] == s2[st2])
 		return (is_match(s1, st1 + 1, s2, st2 + 1));
