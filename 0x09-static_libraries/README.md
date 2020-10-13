@@ -1,1 +1,4 @@
-Will update with task descriptions
+- libholberton.a: (0) a static library containing many C functions from previous projects
+- holberton.h: (0) header file with prototypes for all the functions in libholberton.a
+- create_static_lib.sh: (1) bash script that creates a static library called liball.a from all the .c files in the current directory
+- (2) https://www.linkedin.com/pulse/c-static-libraries-maddi-laizure
