@@ -3,7 +3,7 @@
 /**
  * argstostr - concatenates all the arguments of your program
  * @ac: integer that is size of array of arguments from command line
- * @av: pointer to char array of arguments from command line
+ * @av: pointer to char arrays of arguments from command line
  *
  * Return: pointer to a new string; NULL on failure of if ac or av are 0
  */
@@ -18,10 +18,11 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; ++i)
 	{
-		while (av[i][l] != '\0')
+		for (j = 0; av[i][j] != '\0'; ++j)
 			l++;
 	}
-/* l is combined length of strings without null terminators
+/*
+ * l is combined length of strings without null terminators
  * ac the number of new lines needed
  * 1 for the null terminator
  */
