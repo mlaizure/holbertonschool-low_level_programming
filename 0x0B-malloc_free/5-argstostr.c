@@ -13,18 +13,21 @@ char *argstostr(int ac, char **av)
 	char *cat;
 	int i, j, k = 0, l = 0;
 
-	if (ac == 0 || av == 0)
-		return (0);
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
 	for (i = 0; i < ac; ++i)
 	{
 		while (av[i][l] != '\0')
 			l++;
 	}
-
-	cat = malloc(sizeof(char) * l + sizeof(char) * ac);
+/* l is combined length of strings without null terminators
+ * ac the number of new lines needed
+ * 1 for the null terminator
+ */
+	cat = malloc(sizeof(char) * l + sizeof(char) * ac + 1);
 	if (!cat)
-		return (0);
+		return (NULL);
 
 	for (i = 0; i < ac; ++i)
 	{
