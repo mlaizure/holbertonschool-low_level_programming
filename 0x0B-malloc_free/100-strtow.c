@@ -11,7 +11,7 @@
 char **strtow(char *str)
 {
 	char **arrstr;
-	int i, wordstart, j = 0, k = 0, c = 0;
+	int i = 0, wordstart = 0, j = 0, k = 0, c = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -19,15 +19,17 @@ char **strtow(char *str)
 		str++;
 	if (*str == '\0')
 		return (NULL);
-	for (i = 0;; ++i)
-		if (str[i] != ' ')
+	while (str[i] != '\0')
+	{
+		if (str[i] != ' ' && str[i] != '\0')
 		{
 			while (str[i] != ' ' && str[i] != '\0')
 				i++;
-			if (str[i] == '\0')
-				break;
 			k++;
 		}
+		if (str[i] != '\0')
+			i++;
+	}
 	arrstr = malloc(sizeof(char *) * (k + 1));
 	if (!arrstr)
 		return (NULL);
