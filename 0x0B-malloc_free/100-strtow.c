@@ -14,7 +14,7 @@ char **strtow(char *str)
 	char **arrstr;
 	int i, wordstart, j = 0, k = 0, c = 0;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || *str == ' ')
 		return (NULL);
 	for (i = 0; str[i] != '\0'; ++i)
 		if (str[i] != ' ')
@@ -22,13 +22,14 @@ char **strtow(char *str)
 			while (str[i] != ' ' && str[i] != '\0')
 				i++;
 			k++;
+			i--;
 		}
 	arrstr = malloc(sizeof(char *) * (k + 1));
 	if (!arrstr)
 		return (NULL);
 	for (i = 0; str[i] == ' '; ++i)
 		;
-	for (wordstart = i; str[i] != '\0'; ++i)
+	for (wordstart = i;; ++i)
 		if (str[i] == ' ' || str[i] == '\0')
 		{
 			arrstr[j] = malloc(sizeof(char) * (i - wordstart + 1));
@@ -40,6 +41,8 @@ char **strtow(char *str)
 			for (; str[i] == ' '; ++i)
 				;
 			wordstart = i;
+			if (str[i] == '\0')
+				break;
 		}
 	arrstr[j] = NULL;
 	return (arrstr);
