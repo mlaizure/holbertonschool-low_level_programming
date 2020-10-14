@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -14,22 +13,25 @@ char **strtow(char *str)
 	char **arrstr;
 	int i, wordstart, j = 0, k = 0, c = 0;
 
-	if (str == NULL || *str == '\0' || *str == ' ')
+	if (str == NULL)
 		return (NULL);
-	for (i = 0; str[i] != '\0'; ++i)
+	while (*str == ' ')
+		str++;
+	if (*str == '\0')
+		return (NULL);
+	for (i = 0;; ++i)
 		if (str[i] != ' ')
 		{
 			while (str[i] != ' ' && str[i] != '\0')
 				i++;
+			if (str[i] == '\0')
+				break;
 			k++;
-			i--;
 		}
 	arrstr = malloc(sizeof(char *) * (k + 1));
 	if (!arrstr)
 		return (NULL);
-	for (i = 0; str[i] == ' '; ++i)
-		;
-	for (wordstart = i;; ++i)
+	for (i = 0, wordstart = 0;; ++i)
 		if (str[i] == ' ' || str[i] == '\0')
 		{
 			arrstr[j] = malloc(sizeof(char) * (i - wordstart + 1));
