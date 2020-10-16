@@ -13,7 +13,7 @@ void print_number(int n);
 int main(int argc, char *argv[])
 {
 	int i, j;
-	long unsigned int prod;
+	unsigned long int prod;
 	int arg1 = 1;
 	int arg2 = 2;
 
