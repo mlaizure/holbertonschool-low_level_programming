@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	char operator = *argv[2];
+	char *operator = argv[2];
 	int (*func)(int, int);
 	int num1, num2, result;
 
@@ -25,14 +25,14 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	func = get_op_func(&operator);
+	func = get_op_func(operator);
 	if (!func)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	if ((operator == '/' || operator == '%') && num2 == 0)
+	if ((*operator == '/' || *operator == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
