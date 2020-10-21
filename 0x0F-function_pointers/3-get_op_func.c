@@ -21,11 +21,8 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i;
 
-	if (!s || s[1] != '\0')
-		return (NULL);
-
 	i = 0;
-	while (ops[i].op)
+	while (s && s[1] == '\0' && ops[i].op)
 	{
 		if (*s == *ops[i].op)
 			return (ops[i].f);
