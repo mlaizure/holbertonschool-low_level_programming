@@ -3,6 +3,8 @@
 
 /**
  * main - prints the opcodes of its own main function
+ * @argc: number of arguments from command line
+ * @argv: array of arguments from command line
  *
  * Return: Always 0.
  */
