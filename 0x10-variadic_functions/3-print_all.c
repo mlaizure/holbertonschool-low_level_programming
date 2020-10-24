@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	const char * const f = format;
 
 	va_start(arg_list, format);
-	while (f[i] != '\0')
+	while (f && f[i] != '\0')
 	{
 		while (f[i] == 'c' || f[i] == 'i' || f[i] == 'f' || f[i] == 's')
 		{
