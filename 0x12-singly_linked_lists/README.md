@@ -4,5 +4,5 @@
 - 3: function that adds a new node at the end of a list_t list
 - 4: funciton that frees a list_t list
 - 100: (5) function that prints text before the main funciton is executed
-- 101: (6) 64-bit assembly program that prints Hello, Holberton followed by a new line using the `printf` function
+- 101: (6) 64-bit assembly program that prints `Hello, Holberton` followed by a new line using the `printf` function
 - lists.h: containts prototypes for functions in this directory as well as a data structure for singly linked lists: list_t
