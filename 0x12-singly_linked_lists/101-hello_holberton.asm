@@ -3,9 +3,9 @@ section .text
 	global main
 
 main:
-	mov	esi, msg
-	mov	edi, fmt
-	mov	eax, 0
+	mov	rdi, fmt
+	mov	rsi, msg
+	mov	al, 0
 	call 	printf
 
 	mov 	ebx, 0
