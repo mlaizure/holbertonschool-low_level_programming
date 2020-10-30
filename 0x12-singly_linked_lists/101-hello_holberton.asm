@@ -4,13 +4,13 @@ section .text
 	extern	exit
 
 main:
+	mov	rax, 0
 	mov	rdi, fmt
-	mov	rsi, msg
-	mov	al, 0
 	call 	printf
 
+	mov 	rax, 0
+	mov 	rdi, 0
 	call	exit
 
 section .data
-fmt db		"%s", 10, 0
-msg db		"Hello, Holberton"
+fmt db		"Hello, Holberton", 10, 0
