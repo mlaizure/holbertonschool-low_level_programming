@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	unsigned int wrt;
 	char *buf;
 
-	buf = malloc(sizeof(char) * letters + 1);
+	buf = malloc(sizeof(char) * letters);
 	if (!buf)
 		return (0);
 
@@ -30,8 +30,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	rd = read(fd, buf, letters);
 	if (rd < 0)
 		return (0);
-
-	buf[letters] = '\0';
 
 	wrt = write(STDOUT_FILENO, buf, letters);
 	if (wrt != letters)
