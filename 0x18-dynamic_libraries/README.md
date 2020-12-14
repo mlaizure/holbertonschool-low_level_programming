@@ -1,0 +1,4 @@
+- 0: dynamic library `libholberton.so` containing specified functions
+- 1: bash script that creates a dynamic library called `liball.so` from all the `.c` files that are in the current directory
+- 2: 
+- 100: (3) dynamic library that contains C funcitons that can be called from Python
