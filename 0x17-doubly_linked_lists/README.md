@@ -7,6 +7,4 @@
 - 6: returns the sum of all the data (n) of a `dlistint_t` linked list
 - 7: inserts a new node at a given position in a `dlistint_t` list
 - 8: deletes the node at index `index` of a `dlistint_t` linked list
-- 100: (9) password for crackme4
 - 101: (10) largest palindrome made from the product of two 3-digit numbers
-- 102: (11) keygen for crackme5
