@@ -5,4 +5,3 @@
 - 4: function that retrieves a value associated with a key
 - 5: function that prints a hash table
 - 6: function that deletes a hash table
-- 100: (7) functions to create and use and ordered hash table
