@@ -8,12 +8,12 @@ def island_perimeter(grid):
     for row_num, row in enumerate(grid):
         for count, value in enumerate(row):
             if value == 1:
-                if count == 0 or row[count - 1] == 0:
+                if count > 0 and row[count - 1] == 0:
                     perimeter += 1
-                if count == len(row) or row[count + 1] == 0:
+                if count < len(row) - 1 and row[count + 1] == 0:
                     perimeter += 1
-                if row_num == 0 or grid[row_num - 1][count] == 0:
+                if row_num > 0 and grid[row_num - 1][count] == 0:
                     perimeter += 1
-                if row_num == len(grid) or grid[row_num + 1][count] == 0:
+                if row_num < len(grid) - 1 and grid[row_num + 1][count] == 0:
                     perimeter += 1
     return perimeter
