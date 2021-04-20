@@ -12,7 +12,7 @@ void print_array(int *array, size_t left, size_t right);
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (!array)
+	if (!array || size <= 0)
 		return (-1);
 	return (bin_search(array, value, 0, size - 1));
 }
@@ -36,8 +36,10 @@ int bin_search(int *array, int value, size_t left, size_t right)
 		if (array[mid] == value)
 		{
 			print_array(array, left, right);
-			if (array[mid - 1] == value)
-				return (bin_search(array, value, left, mid));
+			if (mid != 0)
+				if (array[mid - 1] == value)
+					return (bin_search(array, value,
+							   left, mid));
 			return (mid);
 		}
 		if (array[mid] < value)
