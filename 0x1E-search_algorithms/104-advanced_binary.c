@@ -39,7 +39,7 @@ int bin_search(int *array, int value, size_t left, size_t right)
 			if (mid != 0)
 				if (array[mid - 1] == value)
 					return (bin_search(array, value,
-							   left, mid));
+							   mid - 1, mid - 1));
 			return (mid);
 		}
 		if (array[mid] < value)
