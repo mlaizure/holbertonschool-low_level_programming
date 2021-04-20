@@ -5,7 +5,7 @@ int binary_search_1(int *array, int value, size_t left, size_t right);
  * exponential_search - searches array of ints with exponential search
  * @array: pointer to array to search
  * @size: number of elements in array
- * @value: values to search for
+ * @value: value to search for
  * Return: first index where value is located or -1 on failure
  */
 
@@ -36,7 +36,7 @@ int exponential_search(int *array, size_t size, int value)
 /**
  * binary_search_1 - searches for value in array of ints using binary search
  * @array: pointer to array to search
- * @value: values to search for
+ * @value: value to search for
  * @left: low index of array to search
  * @right: high index of array to search
  * Return: first index where value is located or -1 on failure
