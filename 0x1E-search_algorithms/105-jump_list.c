@@ -21,7 +21,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		prev = list->index;
 		while (list->index < size - 1 && list->index < step)
 			list = list->next;
-		printf("Value checked array[%d] = [%d]\n",
+		printf("Value checked at index [%d] = [%d]\n",
 		       (int)list->index, list->n);
 		if (list->n >= value || list->index == size - 1)
 			break;
