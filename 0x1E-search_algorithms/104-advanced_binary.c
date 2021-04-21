@@ -37,13 +37,9 @@ int bin_search(int *array, int value, size_t left, size_t right)
 		{
 			print_array(array, left, right);
 			if (mid != 0)
-			{
 				if (array[mid - 1] == value)
 					return (bin_search(array, value,
-							   mid - 1, mid));
-				else
-					return (left);
-			}
+							   left, mid));
 			return (mid);
 		}
 		if (array[mid] < value)
@@ -54,7 +50,7 @@ int bin_search(int *array, int value, size_t left, size_t right)
 		else
 		{
 			print_array(array, left, right);
-			return (bin_search(array, value, left, mid - 1));
+			return (bin_search(array, value, left, mid));
 		}
 	}
 	return (-1);
